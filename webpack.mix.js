@@ -1,9 +1,12 @@
+if(process.argv.includes('--manage')){
+  require(`${__dirname}/webpack.mix.manage.js`)
+  return
+}
 const path = require('path')
 const fs = require('fs-extra')
 const mix = require('laravel-mix')
 require('laravel-mix-versionhash')
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 mix
   .js('resources/js/app.js', 'public/dist/js')
   .sass('resources/sass/app.scss', 'public/dist/css')
