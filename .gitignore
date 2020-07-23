@@ -16,3 +16,4 @@ yarn-error.log
 phpunit.dusk.xml
 *.code-workspace
 /public/vendor
+/public/mix-manifest.json
